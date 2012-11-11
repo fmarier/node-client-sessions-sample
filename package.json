@@ -1,0 +1,20 @@
+{
+  "name": "node-client-sessions-sample",
+  "version": "0.0.1",
+  "private": true,
+  "description": "A sample Express application that uses client-sessions",
+  "main": "demo.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fmarier/node-client-sessions-sample.git"
+  },
+  "author": "Francois Marier <francois@mozilla.com>",
+  "license": "CC0",
+  "scripts": {
+    "start": "./demo.js"
+  },
+  "dependencies": {
+    "express": ">= 3",
+    "client-sessions": ">= 0.0.9"
+  }
+}
