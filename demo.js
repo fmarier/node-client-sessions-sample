@@ -9,21 +9,21 @@ app.use(clientSessions({
 }));
 
 app.get('/', function (req, res){
-  if (req.session.username) {
-    res.send('Welcome ' + req.session.username + '! (<a href="/logout">logout</a>)');
+  if (req.session_state.username) {
+    res.send('Welcome ' + req.session_state.username + '! (<a href="/logout">logout</a>)');
   } else {
     res.send('You need to <a href="/login">login</a>.');
   }
 });
 
 app.get('/login', function (req, res){
-  req.session.username = 'JohnDoe';
-  console.log(req.session.username + ' logged in.');
+  req.session_state.username = 'JohnDoe';
+  console.log(req.session_state.username + ' logged in.');
   res.redirect('/');
 });
 
 app.get('/logout', function (req, res) {
-  req.session.reset();
+  req.session_state.reset();
   res.redirect('/');
 });
 
